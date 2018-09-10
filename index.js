@@ -17,6 +17,29 @@ class Frog extends Animal{
     }
 }
 
+class Bat extends Animal{
+    constructor(name,num_legs,color){
+        super(name,num_legs);
+        this.color=color;
+        this.superpower=new Superpower(true,true);
+    }
+    is_warm_blooded(){
+        return false;
+    }
+}
+
+class Fox extends Animal{
+    constructor(name,num_legs,color){
+        super(name,num_legs);
+        this.color=color;
+        this.superpower=new Superpower(true,true);
+    }
+    is_warm_blooded(){
+        return false;
+    }
+}
+
+
 class Superpower{
     constructor(userlaser,invisible){
         this.uselaser=userlaser;
