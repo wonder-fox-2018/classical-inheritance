@@ -1,9 +1,18 @@
 "use strict"
 class Binatang {
-    constructor(jenisMakanan, penutupTubuh, skill){
+    constructor(jenisMakanan, penutupTubuh){
         this.jenisMakanan = jenisMakanan
         this.penutupTubuh = penutupTubuh
-        this.superPower = skill
+    }
+
+    teleportasi(){
+        console.log ('Berpindah tempat dalam sekejap!')
+    }
+    kemampuanPenyembuh(){
+        console.log ('Pulihkan kesakitan diri sendiri')
+    }
+    manipulasiWaktu(){
+        console.log ('Melambatkan waktu untuk menjauh dari predator')
     }
    
 }
@@ -11,6 +20,7 @@ class Binatang {
 class Badak extends Binatang{
     constructor(jenisMakanan, penutupTubuh, skill){
         super(jenisMakanan, penutupTubuh, skill)
+        this.name='Badak'
     }
 }
 
@@ -38,21 +48,10 @@ class Cacing extends Binatang{
     }
 }
 
-class SuperPower{
-    teleportasi(){
-        console.log ('Berpindah tempat dalam sekejap!')
-    }
-    kemampuanPenyembuh(){
-        console.log ('Pulihkan kesakitan diri sendiri')
-    }
-    manipulasiWaktu(){
-        console.log ('Melambatkan waktu untuk menjauh dari predator')
-    }
-}
 
-let badak = new Binatang('Daun', 'kulit tebal', 'menyeruduk' )
-// const Onta = new Binatang('Daun', 'berbulu', 'menahan haus' )
-// console.log(Ikan.SuperPower.kemampuanPenyembuh())
-//console.log(badak.superPower.teleportasi())
+
+let badak = new Badak('Daun', 'kulit tebal', 'menyeruduk' )
+let cacing = new Binatang('Humus', 'kulit berlendir', 'mengorek tanah')
+console.log(badak.teleportasi())
 
 console.log(badak)
